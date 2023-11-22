@@ -282,6 +282,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/settings', [SettingControllers\SettingController::class, 'index'])->name('settings');
     Route::get('/settings/{category}', [SettingControllers\SettingController::class, 'category'])->name('settings.category');
     Route::post('/settings/{category}', [SettingControllers\SettingController::class, 'update']);
+
+    // Notifications
+    Route::get('/notifications', [ActivityControllers\NotificationController::class, 'index'])->name('notifications');
+
 });
 
 // MFA routes
