@@ -55,6 +55,10 @@ return [
     // and used by BookStack in URL generation.
     'url' => env('APP_URL', '') === 'http://bookstack.dev' ? '' : env('APP_URL', ''),
 
+    // Application Base URL, Used by laravel in development commands
+    // and used by BookStack in URL generation.
+    'baseURL' => env('APP_URL', '') === 'http://bookstack.dev' ? 'http://bookstack.dev' : env('APP_URL', ''),
+
     // A list of hosts that BookStack can be iframed within.
     // Space separated if multiple. BookStack host domain is auto-inferred.
     'iframe_hosts' => env('ALLOWED_IFRAME_HOSTS', null),
