@@ -39,13 +39,21 @@ class Book extends Entity implements HasCoverImage
     }
 
     /**
+     * Get the shareable url.
+     */
+    public function getShareUrl(): string
+    {
+        $baseUrl = config('app.baseURL');
+        return $baseUrl . '/books/' . urlencode($this->slug);
+    }
+
+    /**
      * Get the whatsapp url.
      */
     public function getWhatsappUrl(): string
     {
-        $baseUrl = config('app.baseURL');
-
-        return $baseUrl . '/books/' . urlencode($this->slug);
+        $baseUrl = config('app.baseURL'); 
+        return 'https://wa.me/?text=' . $baseUrl . '/books/' . urlencode($this->slug);
     }
 
     /**
@@ -54,7 +62,6 @@ class Book extends Entity implements HasCoverImage
     public function getEmailUrl(): string
     {
         $baseUrl = config('app.baseURL');
-
         return 'mailto:?body=' . $baseUrl . '/books/' . urlencode($this->slug);
     }
 
