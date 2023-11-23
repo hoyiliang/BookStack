@@ -11,6 +11,18 @@ use Illuminate\Notifications\Messages\MailMessage;
 
 class CommentCreationNotification extends BaseActivityNotification
 {
+    /**
+     * Get the notification's channels.
+     *
+     * @param mixed $notifiable
+     *
+     * @return array|string
+     */
+    public function via($notifiable)
+    {
+        return ['mail', 'database'];
+    }
+
     public function toMail(User $notifiable): MailMessage
     {
         /** @var Comment $comment */

@@ -2,6 +2,7 @@
 
 namespace BookStack\Activity\Notifications\Messages;
 
+use BookStack\Activity\Models\Activity;
 use BookStack\Activity\Models\Loggable;
 use BookStack\Activity\Notifications\MessageParts\EntityPathMessageLine;
 use BookStack\Activity\Notifications\MessageParts\LinkedMailMessageLine;
@@ -20,7 +21,20 @@ abstract class BaseActivityNotification extends MailNotification
     public function __construct(
         protected Loggable|string $detail,
         protected User $user,
+        protected Activity $activity
     ) {
+    }
+
+    /**
+     * Get the notification's channels.
+     *
+     * @param mixed $notifiable
+     *
+     * @return array|string
+     */
+    public function via($notifiable)
+    {
+        return ['mail', 'database'];
     }
 
     /**
@@ -34,6 +48,7 @@ abstract class BaseActivityNotification extends MailNotification
         return [
             'activity_detail' => $this->detail,
             'activity_creator' => $this->user,
+            'activity' => $this->activity
         ];
     }
 

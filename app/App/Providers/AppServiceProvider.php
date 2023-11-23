@@ -60,7 +60,7 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
 
         // Set morph-map for our relations to friendlier aliases
-        Relation::enforceMorphMap([
+        Relation::morphMap([
             'bookshelf' => Bookshelf::class,
             'book'      => Book::class,
             'chapter'   => Chapter::class,

@@ -43,6 +43,6 @@ class CommentCreationNotificationHandler extends BaseNotificationHandler
             }
         }
 
-        $this->sendNotificationToUserIds(CommentCreationNotification::class, $watcherIds, $user, $detail, $page);
+        $this->sendNotificationToUserIds(CommentCreationNotification::class, $watcherIds, $user, $detail, $page, $activity);
     }
 }
