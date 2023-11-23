@@ -7,13 +7,13 @@
 
     <div refs="page-comments@comment-count-bar" class="grid half left-focus v-center no-row-gap">
         <h5 refs="page-comments@comments-title">{{ trans_choice('entities.comment_count', $commentTree->count(), ['count' => $commentTree->count()]) }}</h5>
-        @if ($commentTree->empty() && userCan('comment-create-all'))
+        <!-- @if ($commentTree->empty() && userCan('comment-create-all'))
             <div class="text-m-right" refs="page-comments@add-button-container">
                 <button type="button"
                         refs="page-comments@add-comment-button"
                         class="button outline">{{ trans('entities.comment_add') }}</button>
             </div>
-        @endif
+        @endif -->
     </div>
 
     <div refs="page-comments@commentContainer" class="comment-container">
@@ -25,13 +25,13 @@
     @if(userCan('comment-create-all'))
         @include('comments.create')
 
-        @if (!$commentTree->empty())
+        <!-- @if (!$commentTree->empty())
             <div refs="page-comments@addButtonContainer" class="text-right">
                 <button type="button"
                         refs="page-comments@add-comment-button"
                         class="button outline">{{ trans('entities.comment_add') }}</button>
             </div>
-        @endif
+        @endif -->
     @endif
 
 </section>

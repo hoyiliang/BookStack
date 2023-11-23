@@ -1,4 +1,5 @@
-<div refs="page-comments@form-container" hidden class="comment-branch mb-m">
+<!-- <div refs="page-comments@form-container" hidden class="comment-branch mb-m"> -->
+<div refs="page-comments@form-container">
     <div class="comment-box">
 
         <div class="header p-s">{{ trans('entities.comment_new') }}</div>
@@ -21,8 +22,8 @@
                           placeholder="{{ trans('entities.comment_placeholder') }}"></textarea>
                 </div>
                 <div class="form-group text-right">
-                    <button type="button" class="button outline"
-                            refs="page-comments@hide-form-button">{{ trans('common.cancel') }}</button>
+                    <!-- <button type="button" class="button outline"
+                            refs="page-comments@hide-form-button">{{ trans('common.cancel') }}</button> -->
                     <button type="submit" class="button">{{ trans('entities.comment_save') }}</button>
                 </div>
             </form>

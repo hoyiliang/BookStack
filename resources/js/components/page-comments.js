@@ -44,8 +44,8 @@ export class PageComments extends Component {
 
         if (this.form) {
             this.removeReplyToButton.addEventListener('click', this.removeReplyTo.bind(this));
-            this.hideFormButton.addEventListener('click', this.hideForm.bind(this));
-            this.addCommentButton.addEventListener('click', this.showForm.bind(this));
+            // this.hideFormButton.addEventListener('click', this.hideForm.bind(this));
+            // this.addCommentButton.addEventListener('click', this.showForm.bind(this));
             this.form.addEventListener('submit', this.saveComment.bind(this));
         }
     }
@@ -67,17 +67,25 @@ export class PageComments extends Component {
 
         window.$http.post(`/comment/${this.pageId}`, reqData).then(resp => {
             const newElem = htmlToDom(resp.data);
-            this.formContainer.after(newElem);
+            this.container.append(newElem); // ori: this.formContainer.before(newElem);
             window.$events.success(this.createdText);
-            this.hideForm();
+            this.resetForm(); // ori: this.hideForm();
             this.updateCount();
-        }).catch(err => {
+        }).catch(error => {
+            if (error.response && error.response.status === 422) {
+                // Validation error
+                window.$events.showValidationErrors(error);
+            } else {
+                // General error, show a generic message
+                window.$events.error('An error occurred while submitting the comment. Please try again.');
+            }
+        }).finally(() => {
             this.form.toggleAttribute('hidden', false);
-            window.$events.showValidationErrors(err);
+            loading.remove();
         });
 
-        this.form.toggleAttribute('hidden', false);
-        loading.remove();
+        // this.form.toggleAttribute('hidden', false);
+        // loading.remove();
     }
 
     updateCount() {
@@ -94,7 +102,7 @@ export class PageComments extends Component {
 
     showForm() {
         this.formContainer.toggleAttribute('hidden', false);
-        this.addButtonContainer.toggleAttribute('hidden', true);
+        // this.addButtonContainer.toggleAttribute('hidden', true);
         this.formContainer.scrollIntoView({behavior: 'smooth', block: 'nearest'});
         setTimeout(() => {
             this.formInput.focus();
