@@ -19,7 +19,7 @@ class Chapter extends BookChild
     public $searchFactor = 1.2;
 
     protected $fillable = ['name', 'description', 'priority'];
-    protected $hidden = ['pivot', 'deleted_at'];
+    protected $hidden = ['pivot', 'image_id', 'deleted_at'];
 
     /**
      * Get the pages that this chapter contains.
@@ -45,6 +45,23 @@ class Chapter extends BookChild
         ];
 
         return url('/' . implode('/', $parts));
+    }
+
+    /**
+     * Returns chapter cover image, if chapter cover not exists return default cover image.
+     */
+    public function getChapterCover(int $width = 440, int $height = 250): string
+    {
+        $default = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+        if (!$this->image_id || !$this->cover) {
+            return $default;
+        }
+
+        try {
+            return $this->cover->getThumb($width, $height, false) ?? $default;
+        } catch (Exception $err) {
+            return $default;
+        }
     }
 
     /**
