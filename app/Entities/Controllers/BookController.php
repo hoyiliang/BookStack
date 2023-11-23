@@ -48,7 +48,7 @@ class BookController extends Controller
         ]);
 
         // Use the paginate method to get paginated results
-        $perPage = 1; // You can adjust this value based on your needs
+        $perPage = 6; // You can adjust this value based on your needs
         $books = $this->bookRepo->getAllPaginated($perPage, $listOptions->getSort(), $listOptions->getOrder());
 
         $recents = $this->isSignedIn() ? $this->bookRepo->getRecentlyViewed(4) : false;
@@ -69,33 +69,6 @@ class BookController extends Controller
             'listOptions' => $listOptions,
         ]);
     }
-    // public function index(Request $request)
-    // {
-    //     $view = setting()->getForCurrentUser('books_view_type');
-    //     $listOptions = SimpleListOptions::fromRequest($request, 'books')->withSortOptions([
-    //         'name' => trans('common.sort_name'),
-    //         'created_at' => trans('common.sort_created_at'),
-    //         'updated_at' => trans('common.sort_updated_at'),
-    //     ]);
-
-    //     $books = $this->bookRepo->getAllPaginated(18, $listOptions->getSort(), $listOptions->getOrder());
-    //     $recents = $this->isSignedIn() ? $this->bookRepo->getRecentlyViewed(4) : false;
-    //     $popular = $this->bookRepo->getPopular(4);
-    //     $new = $this->bookRepo->getRecentlyCreated(4);
-
-    //     $this->shelfContext->clearShelfContext();
-
-    //     $this->setPageTitle(trans('entities.books'));
-
-    //     return view('books.index', [
-    //         'books'   => $books,
-    //         'recents' => $recents,
-    //         'popular' => $popular,
-    //         'new'     => $new,
-    //         'view'    => $view,
-    //         'listOptions' => $listOptions,
-    //     ]);
-    // }
 
     /**
      * Show the form for creating a new book.
