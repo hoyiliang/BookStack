@@ -67,6 +67,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/books/{slug}/delete', [EntityControllers\BookController::class, 'showDelete']);
     Route::get('/books/{bookSlug}/copy', [EntityControllers\BookController::class, 'showCopy']);
     Route::post('/books/{bookSlug}/copy', [EntityControllers\BookController::class, 'copy']);
+    Route::post('/books/copy-url', [ActivityControllers\BookController::class, 'copyUrl']);
     Route::post('/books/{bookSlug}/convert-to-shelf', [EntityControllers\BookController::class, 'convertToShelf']);
     Route::get('/books/{bookSlug}/sort', [EntityControllers\BookSortController::class, 'show']);
     Route::put('/books/{bookSlug}/sort', [EntityControllers\BookSortController::class, 'update']);
