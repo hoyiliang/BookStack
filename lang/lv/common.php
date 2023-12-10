@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'Dzēsts lietotājs',
     'no_activity' => 'Nav skatāmu darbību',
     'no_items' => 'Vienumi nav pieejami',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'Uz augšu',
     'skip_to_main_content' => 'Pāriet uz saturu',
     'toggle_details' => 'Rādīt aprakstu',

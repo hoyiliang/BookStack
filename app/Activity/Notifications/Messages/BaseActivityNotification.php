@@ -21,7 +21,6 @@ abstract class BaseActivityNotification extends MailNotification
     public function __construct(
         protected Loggable|string $detail,
         protected User $user,
-        protected Activity $activity
     ) {
     }
 
@@ -48,7 +47,6 @@ abstract class BaseActivityNotification extends MailNotification
         return [
             'activity_detail' => $this->detail,
             'activity_creator' => $this->user,
-            'activity' => $this->activity
         ];
     }
 

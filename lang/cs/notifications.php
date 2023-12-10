@@ -3,6 +3,7 @@
  * Text used for activity-based notifications.
  */
 return [
+    'notification' => 'Oznámení',
 
     'new_comment_subject' => 'Nový komentář na stránce: :pageName',
     'new_comment_intro' => 'Uživatel okomentoval stránku v :appName:',

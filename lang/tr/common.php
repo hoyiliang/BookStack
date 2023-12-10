@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'Silinmiş Kullanıcı',
     'no_activity' => 'Gösterilecek aktivite yok',
     'no_items' => 'Herhangi bir öge bulunamadı',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'Başa dön',
     'skip_to_main_content' => 'Ana içeriğe geç',
     'toggle_details' => 'Detayları Göster/Gizle',

@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'Ištrinti naudotoją',
     'no_activity' => 'Nėra veiklų',
     'no_items' => 'Nėra elementų',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'Grįžti į pradžią',
     'skip_to_main_content' => 'Skip to main content',
     'toggle_details' => 'Perjungti detales',

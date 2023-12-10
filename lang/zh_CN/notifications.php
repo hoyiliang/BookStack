@@ -3,6 +3,7 @@
  * Text used for activity-based notifications.
  */
 return [
+    'notification' => '通知',
 
     'new_comment_subject' => '页面上有新评论：:pageName',
     'new_comment_intro' => '一位用户在 :appName: 的页面上发表了评论',

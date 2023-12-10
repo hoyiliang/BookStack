@@ -68,6 +68,7 @@ return [
     'deleted_user' => '削除済みユーザ',
     'no_activity' => '表示するアクティビティがありません',
     'no_items' => 'アイテムはありません',
+    'no_notification' => 'No notifications',
     'back_to_top' => '上に戻る',
     'skip_to_main_content' => 'メインコンテンツへスキップ',
     'toggle_details' => '概要の表示切替',

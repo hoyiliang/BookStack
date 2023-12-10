@@ -68,6 +68,7 @@ return [
     'deleted_user' => '已刪除使用者',
     'no_activity' => '無活動可顯示',
     'no_items' => '無可用項目',
+    'no_notification' => '没有通知',
     'back_to_top' => '回到頂端',
     'skip_to_main_content' => '跳到主內容',
     'toggle_details' => '顯示／隱藏詳細資訊',

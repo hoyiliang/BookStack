@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'Người dùng bị xóa',
     'no_activity' => 'Không có hoạt động nào',
     'no_items' => 'Không có mục nào khả dụng',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'Lên đầu trang',
     'skip_to_main_content' => 'Nhảy đến nội dung chính',
     'toggle_details' => 'Bật/tắt chi tiết',

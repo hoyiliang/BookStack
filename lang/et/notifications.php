@@ -3,6 +3,7 @@
  * Text used for activity-based notifications.
  */
 return [
+    'notification' => 'Notifications',
 
     'new_comment_subject' => 'Uus kommentaar lehel: :pageName',
     'new_comment_intro' => 'Rakenduses :appName kommenteeriti lehte:',

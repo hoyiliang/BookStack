@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'Slettet bruger',
     'no_activity' => 'Ingen aktivitet at vise',
     'no_items' => 'Intet indhold tilgængeligt',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'Tilbage til toppen',
     'skip_to_main_content' => 'Spring til indhold',
     'toggle_details' => 'Vis/skjul detaljer',

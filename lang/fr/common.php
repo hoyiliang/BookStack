@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'Utilisateur supprimé',
     'no_activity' => 'Aucune activité',
     'no_items' => 'Aucun élément',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'Retour en haut',
     'skip_to_main_content' => 'Passer au contenu principal',
     'toggle_details' => 'Afficher les détails',

@@ -68,6 +68,7 @@ return [
     'deleted_user' => '삭제한 사용자',
     'no_activity' => '활동 없음',
     'no_items' => '항목 없음',
+    'no_notification' => 'No notifications',
     'back_to_top' => '맨 위로',
     'skip_to_main_content' => '메인 항목으로',
     'toggle_details' => '내용 보기',

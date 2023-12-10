@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'Verwijderde gebruiker',
     'no_activity' => 'Geen activiteit om weer te geven',
     'no_items' => 'Geen items beschikbaar',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'Terug naar boven',
     'skip_to_main_content' => 'Spring naar de hoofdinhoud',
     'toggle_details' => 'Details weergeven',

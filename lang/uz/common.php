@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'O‘chirilgan foydalanuvchi',
     'no_activity' => 'Ko‘rsatiladigan faollik yo‘q',
     'no_items' => 'Hech narsa mavjud emas',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'Yuqoriga qaytish',
     'skip_to_main_content' => 'Asosiy tarkibga o‘tish',
     'toggle_details' => 'Tafsilotlarni almashtirish',

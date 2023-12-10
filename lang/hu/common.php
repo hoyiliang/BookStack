@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'Törölt felhasználó',
     'no_activity' => 'Nincs megjeleníthető aktivitás',
     'no_items' => 'Nincsenek elérhető elemek',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'Oldal eleje',
     'skip_to_main_content' => 'Ugrás a fő tartalomra',
     'toggle_details' => 'Részletek átkapcsolása',

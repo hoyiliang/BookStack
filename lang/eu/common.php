@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'Erabiltzailea ezabatu',
     'no_activity' => 'Ekintzarik ez erakusteko',
     'no_items' => 'Ez dago elementurik eskuragarri',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'Itzuli gora',
     'skip_to_main_content' => 'Joan eduki nagusira',
     'toggle_details' => 'Ireki xehetasunak',
