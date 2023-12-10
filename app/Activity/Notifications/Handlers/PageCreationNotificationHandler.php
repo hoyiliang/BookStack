@@ -19,6 +19,6 @@ class PageCreationNotificationHandler extends BaseNotificationHandler
         }
 
         $watchers = new EntityWatchers($detail, WatchLevels::NEW);
-        $this->sendNotificationToUserIds(PageCreationNotification::class, $watchers->getWatcherUserIds(), $user, $detail, $detail, $activity);
+        $this->sendNotificationToUserIds(PageCreationNotification::class, $watchers->getWatcherUserIds(), $user, $detail, $detail);
     }
 }

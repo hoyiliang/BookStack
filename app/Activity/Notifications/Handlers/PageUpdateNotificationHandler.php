@@ -46,6 +46,6 @@ class PageUpdateNotificationHandler extends BaseNotificationHandler
             }
         }
 
-        $this->sendNotificationToUserIds(PageUpdateNotification::class, $watcherIds, $user, $detail, $detail, $activity);
+        $this->sendNotificationToUserIds(PageUpdateNotification::class, $watcherIds, $user, $detail, $detail);
     }
 }

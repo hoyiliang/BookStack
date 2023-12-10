@@ -2,7 +2,6 @@
 
 namespace BookStack\Activity\Notifications\Messages;
 
-use BookStack\Activity\Models\Activity;
 use BookStack\Activity\Models\Loggable;
 use BookStack\Activity\Notifications\MessageParts\EntityPathMessageLine;
 use BookStack\Activity\Notifications\MessageParts\LinkedMailMessageLine;
