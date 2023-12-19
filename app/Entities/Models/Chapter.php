@@ -2,7 +2,10 @@
 
 namespace BookStack\Entities\Models;
 
+use BookStack\Uploads\Image;
+use Exception;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Collection;
 
@@ -11,8 +14,10 @@ use Illuminate\Support\Collection;
  *
  * @property Collection<Page> $pages
  * @property string           $description
+ * @property int              $image_id
+ * @property Image|null       $cover
  */
-class Chapter extends BookChild
+class Chapter extends BookChild implements HasCoverImage
 {
     use HasFactory;
 
