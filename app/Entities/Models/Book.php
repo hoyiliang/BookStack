@@ -39,6 +39,33 @@ class Book extends Entity implements HasCoverImage
     }
 
     /**
+     * Get the shareable url.
+     */
+    public function getShareUrl(): string
+    {
+        $baseUrl = config('app.baseURL');
+        return $baseUrl . '/books/' . urlencode($this->slug);
+    }
+
+    /**
+     * Get the whatsapp url.
+     */
+    public function getWhatsappUrl(): string
+    {
+        $baseUrl = config('app.baseURL'); 
+        return 'https://wa.me/?text=' . $baseUrl . '/books/' . urlencode($this->slug);
+    }
+
+    /**
+     * Get the email url.
+     */
+    public function getEmailUrl(): string
+    {
+        $baseUrl = config('app.baseURL');
+        return 'mailto:?body=' . $baseUrl . '/books/' . urlencode($this->slug);
+    }
+
+    /**
      * Returns book cover image, if book cover not exists return default cover image.
      */
     public function getBookCover(int $width = 440, int $height = 250): string

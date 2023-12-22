@@ -38,6 +38,7 @@ return [
     'book_delete_notification'    => 'Book successfully deleted',
     'book_sort'                   => 'sorted book',
     'book_sort_notification'      => 'Book successfully re-sorted',
+    'copied_url_notification'     => 'Copied URL successfully',
 
     // Bookshelves
     'bookshelf_create'            => 'created shelf',

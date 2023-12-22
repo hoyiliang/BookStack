@@ -148,6 +148,9 @@
             @if(userCan('content-export'))
                 @include('entities.export-menu', ['entity' => $book])
             @endif
+
+            @include('entities.share-book', ['entity' => $book])
+
         </div>
     </div>
 
