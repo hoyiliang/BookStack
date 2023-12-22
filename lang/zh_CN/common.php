@@ -68,6 +68,7 @@ return [
     'deleted_user' => '删除用户',
     'no_activity' => '没有活动要显示',
     'no_items' => '没有可用的项目',
+    'no_notification' => '没有通知',
     'back_to_top' => '回到顶部',
     'skip_to_main_content' => '跳转到主要内容',
     'toggle_details' => '显示/隐藏详细信息',

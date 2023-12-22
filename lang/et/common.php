@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'Kustutatud kasutaja',
     'no_activity' => 'Pole tegevusi, mida näidata',
     'no_items' => 'Ühtegi elementi pole',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'Tagasi üles',
     'skip_to_main_content' => 'Otse põhisisu juurde',
     'toggle_details' => 'Näita detaile',

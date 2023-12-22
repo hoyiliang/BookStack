@@ -3,6 +3,11 @@
  * Text used for activity-based notifications.
  */
 return [
+    'notification' => 'Notifications',
+    'mark_all_as_read' => 'Mark All as Read',
+    'mark_all_as_read_notification' => 'All unread notifications successfully mark as read',
+    'delete_all' => 'Delete All Notifications',
+    'delete_all_notification' => 'All notifications successfully deleted',
 
     'new_comment_subject' => 'New comment on page: :pageName',
     'new_comment_intro' => 'A user has commented on a page in :appName:',

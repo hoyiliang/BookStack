@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'کاربر حذف شده',
     'no_activity' => 'بایگانی برای نمایش وجود ندارد',
     'no_items' => 'هیچ موردی در دسترس نیست',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'بازگشت به بالا',
     'skip_to_main_content' => 'رفتن به محتوای اصلی',
     'toggle_details' => 'معکوس کردن اطلاعات',

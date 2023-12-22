@@ -3,6 +3,7 @@
  * Text used for activity-based notifications.
  */
 return [
+    'notification' => 'Notifications',
 
     'new_comment_subject' => 'Novi komentar na stranici: :pageName',
     'new_comment_intro' => 'Korisnik je komentirao stranicu u :appName:',

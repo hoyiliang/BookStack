@@ -3,6 +3,7 @@
  * Text used for activity-based notifications.
  */
 return [
+    'notification' => 'Notifications',
 
     'new_comment_subject' => 'Nieuwe opmerking op pagina: :pageName',
     'new_comment_intro' => 'Een gebruiker heeft gereageerd op een pagina in :appName:',

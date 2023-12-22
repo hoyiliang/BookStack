@@ -67,6 +67,7 @@ return [
     // Misc
     'deleted_user' => 'المستخدم المحذوف',
     'no_activity' => 'لا يوجد نشاط لعرضه',
+    'no_notification' => 'لا إشعارات',
     'no_items' => 'لا توجد عناصر متوفرة',
     'back_to_top' => 'العودة إلى الأعلى',
     'skip_to_main_content' => 'Skip to main content',

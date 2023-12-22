@@ -3,6 +3,7 @@
  * Text used for activity-based notifications.
  */
 return [
+    'notification' => 'Notifications',
 
     'new_comment_subject' => 'Jauns komentārs lapā: :pageName',
     'new_comment_intro' => ':appName: lietotājs komentējis lapu',

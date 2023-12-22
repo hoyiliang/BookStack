@@ -67,7 +67,9 @@ return [
     // Misc
     'deleted_user' => 'Deleted User',
     'no_activity' => 'No activity to show',
+    'no_notification' => 'No notifications',
     'no_items' => 'No items available',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'Back to top',
     'skip_to_main_content' => 'Skip to main content',
     'toggle_details' => 'Toggle Details',

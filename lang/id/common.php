@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'Pengguna yang Dihapus',
     'no_activity' => 'Tidak ada aktivitas untuk ditampilkan',
     'no_items' => 'Tidak ada item yang tersedia',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'Kembali ke atas',
     'skip_to_main_content' => 'Lewatkan ke konten utama',
     'toggle_details' => 'Rincian Alihan',

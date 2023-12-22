@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'Utilizator șters',
     'no_activity' => 'Nicio activitate de afișat',
     'no_items' => 'Niciun articol disponibil',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'Înapoi sus',
     'skip_to_main_content' => 'Treci la conținutul principal',
     'toggle_details' => 'Comută detaliile',

@@ -3,6 +3,7 @@
  * Text used for activity-based notifications.
  */
 return [
+    'notification' => 'Notifications',
 
     'new_comment_subject' => ':pageName sahifada yangi izoh',
     'new_comment_intro' => ':appName ichida foydalanuvchi izoh qoldirdi:',

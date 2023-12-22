@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'Видалений користувач',
     'no_activity' => 'Немає активності для показу',
     'no_items' => 'Немає доступних елементів',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'Повернутися до початку',
     'skip_to_main_content' => 'Перейти до змісту',
     'toggle_details' => 'Подробиці',

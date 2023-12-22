@@ -20,7 +20,7 @@ return [
     'shortcuts_overview_desc' => 'Manage keyboard shortcuts you can use to navigate the system user interface.',
 
     'notifications' => 'Notification Preferences',
-    'notifications_desc' => 'Control the email notifications you receive when certain activity is performed within the system.',
+    'notifications_desc' => 'Control the notifications you receive when certain activity is performed within the system.',
     'notifications_opt_own_page_changes' => 'Notify upon changes to pages I own',
     'notifications_opt_own_page_comments' => 'Notify upon comments on pages I own',
     'notifications_opt_comment_replies' => 'Notify upon replies to my comments',

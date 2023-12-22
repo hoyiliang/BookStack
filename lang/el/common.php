@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'Διαγραμμένος χρήστης',
     'no_activity' => 'Δεν υπάρχει δραστηριότητα προς εμφάνιση',
     'no_items' => 'Δεν υπάρχουν διαθέσιμα στοιχεία',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'Επιστροφή στην κορυφή',
     'skip_to_main_content' => 'Μετάβαση στο κύριο περιεχόμενο',
     'toggle_details' => 'Εναλλαγή λεπτομερειών',

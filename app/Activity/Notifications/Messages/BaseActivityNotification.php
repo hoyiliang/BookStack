@@ -24,6 +24,18 @@ abstract class BaseActivityNotification extends MailNotification
     }
 
     /**
+     * Get the notification's channels.
+     *
+     * @param mixed $notifiable
+     *
+     * @return array|string
+     */
+    public function via($notifiable)
+    {
+        return ['mail', 'database'];
+    }
+
+    /**
      * Get the array representation of the notification.
      *
      * @param  mixed  $notifiable

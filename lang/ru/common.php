@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'Удаленный пользователь',
     'no_activity' => 'Нет действий для просмотра',
     'no_items' => 'Нет доступных элементов',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'Наверх',
     'skip_to_main_content' => 'Перейти к основному контенту',
     'toggle_details' => 'Подробности',

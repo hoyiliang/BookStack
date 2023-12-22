@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'Obrisani korisnik',
     'no_activity' => 'Nema aktivnosti za prikazivanje',
     'no_items' => 'Nema dostupnih stavki',
+    'no_notification' => 'Nema obavijesti',
     'back_to_top' => 'Povratak na vrh',
     'skip_to_main_content' => 'Idi odmah na glavni sadržaj',
     'toggle_details' => 'Vidi detalje',

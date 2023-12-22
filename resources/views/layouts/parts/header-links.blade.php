@@ -11,6 +11,10 @@
         <a href="{{ url('/settings') }}"
            data-shortcut="settings_view">@icon('settings'){{ trans('settings.settings') }}</a>
     @endif
+    @if(!user()->isGuest())
+        <a href="{{ url('/notifications') }}"
+           data-shortcut="settings_view">@icon('notifications'){{ trans('notifications.notification') }}</a>
+    @endif
     @if(!user()->isGuest() && userCan('users-manage') && !userCan('settings-manage'))
         <a href="{{ url('/settings/users') }}"
            data-shortcut="settings_view">@icon('users'){{ trans('settings.users') }}</a>

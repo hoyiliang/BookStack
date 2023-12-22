@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'Odstraněný uživatel',
     'no_activity' => 'Žádná aktivita k zobrazení',
     'no_items' => 'Žádné položky k dispozici',
+    'no_notification' => 'Žádné oznámení',
     'back_to_top' => 'Zpět na začátek',
     'skip_to_main_content' => 'Přeskočit na hlavní obsah',
     'toggle_details' => 'Přepnout podrobnosti',

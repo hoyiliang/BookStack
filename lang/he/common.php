@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'משתמש שנמחק',
     'no_activity' => 'אין פעילות להציג',
     'no_items' => 'אין פריטים זמינים',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'בחזרה ללמעלה',
     'skip_to_main_content' => 'דלג לתוכן העיקרי',
     'toggle_details' => 'הצג/הסתר פרטים',

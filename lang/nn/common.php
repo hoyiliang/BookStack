@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'Slett bruker',
     'no_activity' => 'Ingen aktivitet å vise',
     'no_items' => 'Ingen ting å vise',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'Hopp til toppen',
     'skip_to_main_content' => 'Gå til hovedinnhold',
     'toggle_details' => 'Vis/skjul detaljer',

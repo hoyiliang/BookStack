@@ -68,6 +68,7 @@ return [
     'deleted_user' => 'Borttagen användare',
     'no_activity' => 'Ingen aktivitet att visa',
     'no_items' => 'Inga tillgängliga föremål',
+    'no_notification' => 'No notifications',
     'back_to_top' => 'Tillbaka till toppen',
     'skip_to_main_content' => 'Hoppa till huvudinnehåll',
     'toggle_details' => 'Växla detaljer',
