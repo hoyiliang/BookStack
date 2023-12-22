@@ -20,6 +20,8 @@ export class PageComments extends Component {
         this.addCommentButton = this.$refs.addCommentButton;
         this.hideFormButton = this.$refs.hideFormButton;
         this.removeReplyToButton = this.$refs.removeReplyToButton;
+        this.showMoreButton = this.$refs.showMoreButton;
+        this.allCommentContainer = this.$refs.allCommentContainer;
 
         // Translations
         this.createdText = this.$opts.createdText;
@@ -42,12 +44,39 @@ export class PageComments extends Component {
             this.setReply(event.detail.id, event.detail.element);
         });
 
+        // this.elem.addEventListener('page-comment-display-all', () => {
+        //     this.showMore();
+        // });
+
+        // this.elem.addEventListener('click', (event) => {
+        //     if (event.target.id === 'show-more-btn') {
+        //         this.showMore();
+        //     }
+        // });
+
         if (this.form) {
             this.removeReplyToButton.addEventListener('click', this.removeReplyTo.bind(this));
             // this.hideFormButton.addEventListener('click', this.hideForm.bind(this));
             // this.addCommentButton.addEventListener('click', this.showForm.bind(this));
             this.form.addEventListener('submit', this.saveComment.bind(this));
+            this.showMoreButton.addEventListener('click', this.showMore.bind(this));
         }
+    }
+
+    showMore() {
+        console.log("In show more function");
+
+        // Use getElementById instead of getElementByID
+        // const allComment = document.getElementById('all_container');
+        // const fiveComment = document.getElementById('five_container');
+        this.container.toggleAttribute('hidden', true);
+        this.allCommentContainer.toggleAttribute('hidden', false);
+
+        // Use style.display instead of display
+        // allComment.style.display = 'block';
+        // fiveComment.style.display = 'none';
+        console.log(this.container);
+        console.log(this.allCommentContainer);
     }
 
     saveComment(event) {
@@ -68,9 +97,12 @@ export class PageComments extends Component {
         window.$http.post(`/comment/${this.pageId}`, reqData).then(resp => {
             const newElem = htmlToDom(resp.data);
             this.container.append(newElem); // ori: this.formContainer.before(newElem);
+            this.allCommentContainer.append(newElem);
             window.$events.success(this.createdText);
-            this.resetForm(); // ori: this.hideForm();
+            // this.resetForm(); // ori: this.hideForm();
+            this.formInput.value = '';
             this.updateCount();
+            this.showMore();
         }).catch(error => {
             if (error.response && error.response.status === 422) {
                 // Validation error
@@ -82,6 +114,7 @@ export class PageComments extends Component {
         }).finally(() => {
             this.form.toggleAttribute('hidden', false);
             loading.remove();
+            
         });
 
         // this.form.toggleAttribute('hidden', false);
@@ -121,7 +154,7 @@ export class PageComments extends Component {
     }
 
     getCommentCount() {
-        return this.container.querySelectorAll('[component="page-comment"]').length;
+        return this.allCommentContainer.querySelectorAll('[component="page-comment"]').length;
     }
 
     setReply(commentLocalId, commentElement) {
@@ -140,5 +173,6 @@ export class PageComments extends Component {
         this.container.append(this.formContainer);
         this.showForm();
     }
+    
 
 }
