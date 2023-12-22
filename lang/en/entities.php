@@ -430,4 +430,8 @@ return [
     'watch_detail_parent_book_ignore' => 'Ignoring via parent book',
     'watch_detail_parent_chapter' => 'Watching via parent chapter',
     'watch_detail_parent_chapter_ignore' => 'Ignoring via parent chapter',
+
+    // Show
+    'show_more' => 'Show More',
+    'show_less'=> 'Show Less',
 ];
