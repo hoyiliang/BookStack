@@ -47,10 +47,13 @@ class BookController extends Controller
             'updated_at' => trans('common.sort_updated_at'),
         ]);
 
-        $books = $this->bookRepo->getAllPaginated(18, $listOptions->getSort(), $listOptions->getOrder());
+        // Use the paginate method to get paginated results
+        $perPage = 6; // You can adjust this value based on your needs
+        $books = $this->bookRepo->getAllPaginated($perPage, $listOptions->getSort(), $listOptions->getOrder());
         foreach ($books as $book) {
             $book->watchOptions = new UserEntityWatchOptions(auth()->user(), $book);
         }
+
         $recents = $this->isSignedIn() ? $this->bookRepo->getRecentlyViewed(4) : false;
         $popular = $this->bookRepo->getPopular(4);
         $new = $this->bookRepo->getRecentlyCreated(4);
@@ -59,6 +62,7 @@ class BookController extends Controller
 
         $this->setPageTitle(trans('entities.books'));
 
+        // Pass the paginated books to the view
         return view('books.index', [
             'books'   => $books,
             'recents' => $recents,
