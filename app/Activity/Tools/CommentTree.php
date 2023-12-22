@@ -51,6 +51,7 @@ class CommentTree
             $byId[$comment->local_id] = $comment;
         }
 
+
         $childMap = [];
         foreach ($comments as $comment) {
             $parent = $comment->parent_id;
