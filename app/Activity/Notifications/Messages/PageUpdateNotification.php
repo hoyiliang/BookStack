@@ -21,7 +21,7 @@ class PageUpdateNotification extends BaseActivityNotification
     {
         return ['mail', 'database'];
     }
-    
+
     public function toMail(User $notifiable): MailMessage
     {
         /** @var Page $page */
