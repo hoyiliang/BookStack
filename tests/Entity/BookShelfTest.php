@@ -174,7 +174,7 @@ class BookShelfTest extends TestCase
         // Set book ordering
         $this->asAdmin()->put($shelf->getUrl(), [
             'books' => $books->implode('id', ','),
-            'tags'  => [], 'description_html' => 'abc', 'name' => 'abc',
+            'tags'  => [], 'description' => 'abc', 'name' => 'abc',
         ]);
         $this->assertEquals(3, $shelf->books()->count());
         $shelf->refresh();
@@ -207,7 +207,7 @@ class BookShelfTest extends TestCase
         // Set book ordering
         $this->asAdmin()->put($shelf->getUrl(), [
             'books' => $books->implode('id', ','),
-            'tags'  => [], 'description_html' => 'abc', 'name' => 'abc',
+            'tags'  => [], 'description' => 'abc', 'name' => 'abc',
         ]);
         $this->assertEquals(3, $shelf->books()->count());
         $shelf->refresh();
