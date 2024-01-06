@@ -47,7 +47,9 @@ class BookController extends Controller
             'updated_at' => trans('common.sort_updated_at'),
         ]);
 
-        $books = $this->bookRepo->getAllPaginated(18, $listOptions->getSort(), $listOptions->getOrder());
+        // Use the paginate method to get paginated results
+        $perPage = 6; // You can adjust this value based on your needs
+        $books = $this->bookRepo->getAllPaginated($perPage, $listOptions->getSort(), $listOptions->getOrder());
         foreach ($books as $book) {
             if (auth()->check()) {
                 $book->watchOptions = new UserEntityWatchOptions(auth()->user(), $book);
