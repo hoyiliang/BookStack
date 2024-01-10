@@ -50,9 +50,9 @@ class BookController extends Controller
         // Use the paginate method to get paginated results
         $perPage = 6; // You can adjust this value based on your needs
         $books = $this->bookRepo->getAllPaginated($perPage, $listOptions->getSort(), $listOptions->getOrder());
-        // foreach ($books as $book) {
-        //     $book->watchOptions = new UserEntityWatchOptions(auth()->user(), $book);
-        // }
+        foreach ($books as $book) {
+            $book->watchOptions = new UserEntityWatchOptions(auth()->user(), $book);
+        }
 
         $recents = $this->isSignedIn() ? $this->bookRepo->getRecentlyViewed(4) : false;
         $popular = $this->bookRepo->getPopular(4);
@@ -271,5 +271,4 @@ class BookController extends Controller
 
         return redirect($shelf->getUrl());
     }
-    //test
 }
