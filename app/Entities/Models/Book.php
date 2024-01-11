@@ -52,7 +52,7 @@ class Book extends Entity implements HasCoverImage
      */
     public function getWhatsappUrl(): string
     {
-        $baseUrl = config('app.baseURL'); 
+        $baseUrl = config('app.baseURL');
         return 'https://wa.me/?text=' . $baseUrl . '/books/' . urlencode($this->slug);
     }
 
