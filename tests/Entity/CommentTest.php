@@ -131,7 +131,7 @@ class CommentTest extends TestCase
         $this->postJson("/comment/$page->id", ['text' => 'My new comment']);
 
         $respHtml = $this->withHtml($this->get($page->getUrl()));
-        $respHtml->assertElementCount('.comment-branch', 3);
+        $respHtml->assertElementCount('.comment-branch', 4);
         $respHtml->assertElementNotExists('.comment-branch .comment-branch');
 
         $comment = $page->comments()->first();
