@@ -288,7 +288,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/notification/mark-as-read', [ActivityControllers\NotificationController::class, 'markAsRead'])->name('notification.mark-as-read');
     Route::post('/notification/mark-all-as-read', [ActivityControllers\NotificationController::class, 'markAllAsRead'])->name('notification.mark-all-as-read');
     Route::post('/notification/delete-all', [ActivityControllers\NotificationController::class, 'deleteAll'])->name('notification.delete-all');
-
 });
 
 // MFA routes
