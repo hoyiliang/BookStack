@@ -100,6 +100,7 @@ export class PageComments extends Component {
             // this.updateCount();
             this.showMore();
         }).catch(error => {
+            console.log(error)
             if (error.response && error.response.status === 422) {
                 // Validation error
                 window.$events.showValidationErrors(error);
