@@ -22,6 +22,7 @@ export class PageComments extends Component {
         this.removeReplyToButton = this.$refs.removeReplyToButton;
         this.showMoreButton = this.$refs.showMoreButton;
         this.allCommentContainer = this.$refs.allCommentContainer;
+        this.numContainerDelete = 0;
 
         // Translations
         this.createdText = this.$opts.createdText;
@@ -35,9 +36,13 @@ export class PageComments extends Component {
     }
 
     setupListeners() {
-        this.elem.addEventListener('page-comment-delete', () => {
-            this.updateCount();
-            this.hideForm();
+        this.elem.addEventListener('page-comment-delete', event => {
+            // const count = this.getCommentCount() - 1;
+            // this.commentsTitle.textContent = window.trans_plural(this.countText, count, {count});
+            // this.numContainerDelete++; 
+            // this.showMore();
+            // this.updateCount();
+            // this.hideForm();
         });
 
         this.elem.addEventListener('page-comment-reply', event => {
@@ -66,15 +71,9 @@ export class PageComments extends Component {
     showMore() {
         console.log("In show more function");
 
-        // Use getElementById instead of getElementByID
-        // const allComment = document.getElementById('all_container');
-        // const fiveComment = document.getElementById('five_container');
         this.container.toggleAttribute('hidden', true);
         this.allCommentContainer.toggleAttribute('hidden', false);
 
-        // Use style.display instead of display
-        // allComment.style.display = 'block';
-        // fiveComment.style.display = 'none';
         console.log(this.container);
         console.log(this.allCommentContainer);
     }
@@ -101,9 +100,12 @@ export class PageComments extends Component {
             window.$events.success(this.createdText);
             // this.resetForm(); // ori: this.hideForm();
             this.formInput.value = '';
-            this.updateCount();
+            // const count = this.getCommentCount() + 1;
+            // this.commentsTitle.textContent = window.trans_plural(this.countText, count, {count});
+            // this.updateCount();
             this.showMore();
         }).catch(error => {
+            console.log(error)
             if (error.response && error.response.status === 422) {
                 // Validation error
                 window.$events.showValidationErrors(error);
