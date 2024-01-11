@@ -12,7 +12,7 @@ class NotificationController extends Controller
     public function index()
     {
         $notifications = auth()->user()->notifications()->paginate(15);
-        
+
         return view('users.notification.index', [
             'notifications' => $notifications
         ]);
@@ -36,7 +36,7 @@ class NotificationController extends Controller
         return redirect()->back();
     }
 
-    public function deleteAll(Request $request) 
+    public function deleteAll(Request $request)
     {
         auth()->user()->notifications()->delete();
 
