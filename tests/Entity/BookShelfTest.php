@@ -181,19 +181,19 @@ class BookShelfTest extends TestCase
 
         $resp = $this->asEditor()->get($shelf->getUrl());
         $this->withHtml($resp)->assertElementContains('.book-content a.grid-card:nth-child(1)', $books[0]->name);
-        $this->withHtml($resp)->assertElementNotContains('.book-content a.grid-card:nth-child(3)', $books[0]->name);
+        $this->withHtml($resp)->assertElementNotContains('.book-content a.grid-card:nth-child(5)', $books[0]->name);
 
         setting()->putUser($this->users->editor(), 'shelf_books_sort_order', 'desc');
         $resp = $this->asEditor()->get($shelf->getUrl());
         $this->withHtml($resp)->assertElementNotContains('.book-content a.grid-card:nth-child(1)', $books[0]->name);
-        $this->withHtml($resp)->assertElementContains('.book-content a.grid-card:nth-child(3)', $books[0]->name);
+        $this->withHtml($resp)->assertElementContains('.book-content a.grid-card:nth-child(5)', $books[0]->name);
 
         setting()->putUser($this->users->editor(), 'shelf_books_sort_order', 'desc');
         setting()->putUser($this->users->editor(), 'shelf_books_sort', 'name');
         $resp = $this->asEditor()->get($shelf->getUrl());
         $this->withHtml($resp)->assertElementContains('.book-content a.grid-card:nth-child(1)', 'hdgfgdfg');
-        $this->withHtml($resp)->assertElementContains('.book-content a.grid-card:nth-child(2)', 'bsfsdfsdfsd');
-        $this->withHtml($resp)->assertElementContains('.book-content a.grid-card:nth-child(3)', 'adsfsdfsdfsd');
+        $this->withHtml($resp)->assertElementContains('.book-content a.grid-card:nth-child(3)', 'bsfsdfsdfsd');
+        $this->withHtml($resp)->assertElementContains('.book-content a.grid-card:nth-child(5)', 'adsfsdfsdfsd');
     }
 
     public function test_shelf_view_sorts_by_name_case_insensitively()
@@ -217,8 +217,8 @@ class BookShelfTest extends TestCase
         $html = $this->withHtml($this->asEditor()->get($shelf->getUrl()));
 
         $html->assertElementContains('.book-content a.grid-card:nth-child(1)', 'Book Ab');
-        $html->assertElementContains('.book-content a.grid-card:nth-child(2)', 'Book ac');
-        $html->assertElementContains('.book-content a.grid-card:nth-child(3)', 'Book AD');
+        $html->assertElementContains('.book-content a.grid-card:nth-child(3)', 'Book ac');
+        $html->assertElementContains('.book-content a.grid-card:nth-child(5)', 'Book AD');
     }
 
     public function test_shelf_edit()

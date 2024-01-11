@@ -51,7 +51,9 @@ class BookController extends Controller
         $perPage = 6; // You can adjust this value based on your needs
         $books = $this->bookRepo->getAllPaginated($perPage, $listOptions->getSort(), $listOptions->getOrder());
         foreach ($books as $book) {
-            $book->watchOptions = new UserEntityWatchOptions(auth()->user(), $book);
+            if (auth()->check()) {
+                $book->watchOptions = new UserEntityWatchOptions(auth()->user(), $book);
+            }
         }
 
         $recents = $this->isSignedIn() ? $this->bookRepo->getRecentlyViewed(4) : false;
