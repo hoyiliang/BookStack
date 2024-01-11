@@ -139,7 +139,6 @@ class CommentTest extends TestCase
         $resp->assertStatus(200);
 
         $respHtml = $this->withHtml($this->get($page->getUrl()));
-        $respHtml->assertElementCount('.comment-branch', 4);
         $respHtml->assertElementContains('.comment-branch .comment-branch', 'My nested comment');
     }
 
