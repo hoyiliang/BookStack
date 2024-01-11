@@ -77,13 +77,35 @@ export class PageComment extends Component {
         }
     }
 
-    async delete() {
-        this.showLoading();
+    delete() {
+        // this.showLoading();
+        // window.$http.delete(`/comment/${this.commentId}`);
+        // this.container.closest('.comment-branch').remove();
+        // // this.$emit('delete');
+        // window.$events.success(this.deletedText);
+        // console.log("delete method finished.")
+        // location.reload();
 
-        await window.$http.delete(`/comment/${this.commentId}`);
-        this.container.closest('.comment-branch').remove();
-        window.$events.success(this.deletedText);
-        this.$emit('delete');
+        this.showLoading();
+        window.$http.delete(`/comment/${this.commentId}`);
+
+        const commentBranch = this.container.closest('.comment-branch');
+
+        if (commentBranch) {
+            // Display success message
+            window.$events.success(this.deletedText);
+
+            // Remove comment branch after 1 second
+            setTimeout(() => {
+                commentBranch.remove();
+
+                // Reload the page
+                // eslint-disable-next-line no-restricted-globals
+                location.reload();
+            }, 1000);
+        } else {
+            console.error('Comment branch not found.');
+        }
     }
 
     showLoading() {

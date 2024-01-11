@@ -16,9 +16,9 @@
          option:page-comments:count-text="{{ trans('entities.comment_count') }}"
          class="comments-list"
          aria-label="{{ trans('entities.comments') }}">
-    <div refs="page-comments@comment-count-bar" class="grid half left-focus v-center no-row-gap">
+    <!-- <div refs="page-comments@comment-count-bar" class="grid half left-focus v-center no-row-gap">
         <h5 refs="page-comments@comments-title">{{ trans_choice('entities.comment_count', $commentTree->count(), ['count' => $commentTree->count()]) }}</h5>
-    </div>
+    </div> -->
 
 
     <div refs="page-comments@commentContainer" class="comment-container">
@@ -32,12 +32,23 @@
         @endforeach -->
       
 
+        <!-- @if($commentTree->count() > 0)
+            @foreach(array_slice($commentTree->get(), 0, 5) as $branch)
+                @include('comments.comment-branch', ['branch' => $branch, 'readOnly' => false])
+            @endforeach
+            <div class="text-right">
+                <button refs="page-comments@show-more-button" type="button" id="show-more-btn" class="button outline">{{ trans('entities.show_more') }}</button>
+            </div>
+        @endif -->
         @foreach(array_slice($commentTree->get(), 0, 5) as $branch)
             @include('comments.comment-branch', ['branch' => $branch, 'readOnly' => false])
         @endforeach
-        <div class="text-right">
-            <button refs="page-comments@show-more-button" type="button" id="show-more-btn" class="button outline">{{ trans('entities.show_more') }}</button>
-        </div>
+
+        @if($commentTree->count() > 5)
+            <div class="text-right">
+                <button refs="page-comments@show-more-button" type="button" id="show-more-btn" class="button outline">{{ trans('entities.show_more') }}</button>
+            </div>
+        @endif
     </div>
 
 
@@ -59,53 +70,3 @@
     
 
 </section>
-
-<!-- <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var showMoreBtn = document.getElementById('show-more-btn');
-        var commentContainer = document.querySelector('[refs="page-comments@commentContainer"]');
-
-        if (showMoreBtn && commentContainer) {
-            showMoreBtn.addEventListener('click', function () {
-                // Toggle the visibility of all comments
-                commentContainer.classList.toggle('show-all-comments');
-                // Toggle the button text
-                showMoreBtn.innerText = commentContainer.classList.contains('show-all-comments') ?
-                    '{{ trans('entities.show_less') }}' :
-                    '{{ trans('entities.show_more') }}';
-            });
-        }
-    });
-</script> -->
-
-<!-- <script>
-    function showMore(){
-        console.log("In show more function")
-        allComment = document.getElementById('all_container')
-        fiveComment = document.getElementById('five_container')
-
-        allComment.style.display = "block";
-        fiveComment.style.display = "none";
-    }
-</script> -->
-
-<!-- <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        console.log("In show more function")
-        var showMoreBtn = document.getElementById('show-more-btn');
-        var allComment = document.getElementById('all_container');
-        var fiveComment = document.getElementById('five_container');
-
-        if (showMoreBtn && allComment && fiveComment) {
-            showMoreBtn.addEventListener('click', function () {
-                // Toggle the visibility of all comments
-                allComment.style.display = 'block';
-                fiveComment.style.display = 'none';
-
-                // Optionally, you can add logic to toggle the button text
-                // showMoreBtn.innerText = allComment.style.display === 'block' ?
-                //     '{{ trans('entities.show_less') }}' : '{{ trans('entities.show_more') }}';
-            });
-        }
-    });
-</script> -->
