@@ -1,6 +1,6 @@
 import {Component} from './component';
 import {getLoading, htmlToDom} from '../services/dom';
-import { PageComments } from './page-comments';
+
 export class PageComment extends Component {
 
     setup() {
@@ -98,13 +98,13 @@ export class PageComment extends Component {
             // Remove comment branch after 1 second
             setTimeout(() => {
                 commentBranch.remove();
-                console.log("delete method finished.");
-                
+
                 // Reload the page
+                // eslint-disable-next-line no-restricted-globals
                 location.reload();
             }, 1000);
         } else {
-            console.error("Comment branch not found.");
+            console.error('Comment branch not found.');
         }
     }
 

@@ -39,7 +39,7 @@ export class PageComments extends Component {
         this.elem.addEventListener('page-comment-delete', () => {
             // const count = this.getCommentCount() - 1;
             // this.commentsTitle.textContent = window.trans_plural(this.countText, count, {count});
-            // this.numContainerDelete++; 
+            // this.numContainerDelete++;
             this.showMore();
             // this.updateCount();
             // this.hideForm();
@@ -100,7 +100,6 @@ export class PageComments extends Component {
             // this.updateCount();
             this.showMore();
         }).catch(error => {
-            console.log(error)
             if (error.response && error.response.status === 422) {
                 // Validation error
                 window.$events.showValidationErrors(error);
@@ -166,4 +165,5 @@ export class PageComments extends Component {
         this.container.append(this.formContainer);
         this.showForm();
     }
+
 }
