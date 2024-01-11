@@ -31,7 +31,7 @@
                 @if(!$readOnly && (userCan('comment-create-all') || userCan('comment-update', $comment) || userCan('comment-delete', $comment)))
                 <div class="actions mr-s">
                     @if(userCan('comment-create-all'))
-                        <button refs="page-comment@reply-button" type="button" class="text-button text-muted hover-underline text-small p-xs">@icon('reply') {{ trans('common.reply') }}</button>
+                        <button refs="page-comment@reply-button" type="button" class="text-button text-muted hover-underline text-small p-xs"></button>
                     @endif
                     @if(userCan('comment-update', $comment))
                         <button refs="page-comment@edit-button" type="button" class="text-button text-muted hover-underline text-small p-xs">@icon('edit') {{ trans('common.edit') }}</button>
