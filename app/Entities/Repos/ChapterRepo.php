@@ -18,9 +18,9 @@ use Illuminate\Http\UploadedFile;
 
 class ChapterRepo
 {
-
     public function __construct(
-        protected BaseRepo $baseRepo, protected ImageRepo $imageRepo
+        protected BaseRepo $baseRepo,
+        protected ImageRepo $imageRepo
     ) {
     }
 
